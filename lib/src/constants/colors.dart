@@ -10,5 +10,5 @@ const tWhiteColor = Color(0xFFFFFFFF);
 const tDarkColor = Color(0xFF000000);
 
 const tOnboardingPage1Color = Colors.white;
-const tOnboardingPage2Color = Color(0xFFFDDCDF);
+const tOnboardingPage2Color = Color.fromARGB(255, 239, 203, 162);
 const tOnboardingPage3Color = Color(0xFFBFC2FF);

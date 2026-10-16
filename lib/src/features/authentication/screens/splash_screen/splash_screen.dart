@@ -4,7 +4,7 @@ import 'package:login_app/src/constants/sizes.dart';
 import 'package:login_app/src/constants/text_strings.dart';
 import 'package:login_app/src/constants/colors.dart';
 import 'package:login_app/src/features/authentication/screens/onboarding/onboarding_screen.dart';
-import 'package:login_app/src/features/authentication/screens/welcome/welcome_screen.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -21,6 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
+    super.initState();
     StartAnimation();
   }
   @override
