@@ -4,6 +4,7 @@ import 'package:login_app/src/constants/sizes.dart';
 import 'package:login_app/src/constants/text_strings.dart';
 import 'package:login_app/src/constants/colors.dart';
 import 'package:login_app/src/features/authentication/screens/onboarding/onboarding_screen.dart';
+import 'package:login_app/src/features/authentication/screens/welcome/welcome_screen.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -83,6 +84,6 @@ class _SplashScreenState extends State<SplashScreen> {
       animate = true;
     });
     await Future.delayed(Duration(milliseconds: 5000));
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OnboardingScreen()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => WelcomeScreen()));
   }
 }
