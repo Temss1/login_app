@@ -10,3 +10,5 @@ const String tOnboardingPage3Image = "assets/images/undraw_mobile-payments.png";
 
 const String tWelcomeScreenImage = "assets/images/brand_construction.png";
 const String tGoogleLogoImage = "assets/images/google_logo.png";
+
+const String tForgetPasswordImage = "assets/images/forget_password.png";

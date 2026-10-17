@@ -37,9 +37,12 @@ const String tSignupSubTitle = "Create your profile to start your journey.";
 
 // Forget Password Text
 const String tForgetPasswordTitle = "Make Selection!";
+const String tForgetPassword = "Forget Password";
 const String tForgetPasswordSubTitle = "Select one of the options given below to reset your password.";
-const String tResetViaEmail = "Reset via Email Verification";
-const String tResetViaPhone = "Reset via Phone Verification"; 
+const String tResetViaEmailTitle = "E-Mail";
+const String tResetViaEmailSubtitle = "Reset via Email Verification";
+const String tResetViaPhoneTitle = "Phone No";
+const String tResetViaPhoneSubtitle = "Reset via Phone Verification"; 
 
 // Forget Password via phone
 const String tForgetPhoneSubTitle = "Enter your registered phone number to receive OTP";
