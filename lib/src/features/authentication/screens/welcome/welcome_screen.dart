@@ -3,6 +3,8 @@ import 'package:login_app/src/constants/image_strings.dart';
 import 'package:login_app/src/constants/text_strings.dart';
 import 'package:login_app/src/constants/colors.dart';
 import 'package:login_app/src/constants/sizes.dart';
+import 'package:login_app/src/features/authentication/screens/login/login_screen.dart';
+import 'package:login_app/src/features/authentication/screens/signup/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -28,7 +30,9 @@ class WelcomeScreen extends StatelessWidget {
               children: [
                 Expanded(
                   child: OutlinedButton(
-                    onPressed: (){}, 
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                    }, 
                     style: OutlinedButton.styleFrom (
                       side: BorderSide(color: tSecondaryColor),
                       padding: EdgeInsets.symmetric(vertical: tButtonHeight),
@@ -40,7 +44,9 @@ class WelcomeScreen extends StatelessWidget {
                 SizedBox(width: 10,),
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignupScreen()));
+                    },
                     style: OutlinedButton.styleFrom (
                       side: BorderSide(color: tSecondaryColor),
                       padding: EdgeInsets.symmetric(vertical: tButtonHeight),
