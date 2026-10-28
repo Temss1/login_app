@@ -3,7 +3,6 @@ import 'package:login_app/src/constants/image_strings.dart';
 import 'package:login_app/src/constants/sizes.dart';
 import 'package:login_app/src/constants/text_strings.dart';
 import 'package:login_app/src/constants/colors.dart';
-import 'package:login_app/src/features/authentication/screens/onboarding/onboarding_screen.dart';
 import 'package:login_app/src/features/authentication/screens/welcome/welcome_screen.dart';
 
 

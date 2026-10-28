@@ -3,6 +3,7 @@ import 'package:login_app/src/constants/image_strings.dart';
 // import 'package:login_app/src/constants/sizes.dart';
 import 'package:login_app/src/constants/text_strings.dart';
 import 'package:login_app/src/constants/colors.dart';
+import 'package:login_app/src/features/authentication/screens/forget_password/otp_screen.dart';
 
 class ForgetPasswordMail extends StatelessWidget {
   const ForgetPasswordMail({super.key});
@@ -10,6 +11,7 @@ class ForgetPasswordMail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: tWhiteColor,
       body: Container(
         margin: EdgeInsets.only(top: 200),
         padding: EdgeInsets.all(20),
@@ -36,7 +38,10 @@ class ForgetPasswordMail extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   ElevatedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.pop(context);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => OtpScreen()));
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: tSecondaryColor,
                       foregroundColor: Colors.white,

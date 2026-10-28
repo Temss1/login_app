@@ -5,6 +5,8 @@ class SignupFormWidget extends StatelessWidget {
   final String hint;
   final IconData prefixIcon;
   final IconData? suffixIcon;
+  final TextEditingController controller;
+  final bool obscureText;
 
   const SignupFormWidget({
     super.key,
@@ -12,6 +14,8 @@ class SignupFormWidget extends StatelessWidget {
     required this.hint,
     required this.prefixIcon,
     this.suffixIcon,
+    required this.controller,
+    this.obscureText = false,
   });
 
   @override
@@ -22,6 +26,8 @@ class SignupFormWidget extends StatelessWidget {
         child: Column(
           children: [
             TextFormField(
+              controller: controller,
+              obscureText: obscureText,
               decoration: InputDecoration(
                 label: Text(label),
                 hint: Text(hint),

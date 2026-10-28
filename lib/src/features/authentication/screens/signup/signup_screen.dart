@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:login_app/src/constants/colors.dart';
 import 'package:login_app/src/constants/sizes.dart';
 import 'package:login_app/src/constants/text_strings.dart';
 import 'package:login_app/src/constants/image_strings.dart';
+import 'package:login_app/src/features/authentication/controllers/signup_controller.dart';
 import 'package:login_app/src/features/authentication/screens/signup/signup_form_widget.dart';
 import 'package:login_app/src/features/authentication/screens/login/login_screen.dart';
 
@@ -11,12 +13,16 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SignUpController());
+    final _formKey = GlobalKey<FormState>();
+
     return 
       Scaffold(
         body: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(30),
             child: Form(
+              key: _formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -35,21 +41,25 @@ class SignupScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   SignupFormWidget(
+                    controller: controller.fullName,
                     label: "Full Name",
                     hint: "Enter your Full Name",
                     prefixIcon: Icons.person_outline_outlined,
                   ),
                   SignupFormWidget(
+                    controller: controller.email,
                     label: "Email",
                     hint: "Enter your Email",
                     prefixIcon: Icons.email,
                   ),
                   SignupFormWidget(
+                    controller: controller.phoneNo,
                     label: "Phone No",
                     hint: "Enter your Phone Number",
                     prefixIcon: Icons.phone,
                   ),
                   SignupFormWidget(
+                    controller: controller.password,
                     label: "Password",
                     hint: "Enter your Password",
                     prefixIcon: Icons.fingerprint,
@@ -58,7 +68,11 @@ class SignupScreen extends StatelessWidget {
                   SizedBox(height: 10,),
 
                   OutlinedButton(
-                    onPressed: (){}, 
+                    onPressed: (){
+                      if(_formKey.currentState!.validate()) {
+                        SignUpController.instance.registerUser(controller.email.text.trim(), controller.password.text.trim());
+                      }
+                    }, 
                     style: OutlinedButton.styleFrom(
                       padding: EdgeInsets.symmetric(vertical: tButtonHeight),
                       shape: RoundedRectangleBorder(),
